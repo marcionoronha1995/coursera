@@ -61,13 +61,19 @@ alert("alert fifth " + 5 + 6);
 <p>They are automatically declared when first used.</p>
 
 <p id="demo1"></p>
+<p id="demo2"></p>
 
 <script>
-x = 5;
-y = 6;
-z = x + y;
+let x = 5;
+let y = 6;
+let z = x + y;
 document.getElementById("demo1").innerHTML =
 "The value of z is: " + z;
+const price1 = 5;
+const price2 = 7;
+let total = price1 + price2;
+document.getElementById("demo2").innerHTML =
+"The value of tota is: R$" + total;
 </script>
     
 </body>
