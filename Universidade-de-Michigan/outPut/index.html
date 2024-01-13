@@ -4,6 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="variaveis.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        /* Estilos para o modal */
+        #myModal {
+          display: none;
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          padding: 20px;
+          background-color: #fff;
+          border: 1px solid #ccc;
+          z-index: 1;
+        }
+      </style>
 </head>
 <body>
 
@@ -11,21 +27,59 @@
 <p>My First Paragraph</p>
 
 <p id="demo"></p>
+<p id="demo1"></p>
 
 <script>
 document.getElementById("demo").innerHTML = 5 + 6;
-document.write("teste document Write")
+document.write("teste document Write");
+console.log("1");
 </script>
 
 
 <h1>My First Web Page</h1>
 <p>My first paragraph.</p>
 
-<button type="button" onclick="document.write(5 + 6)">Try it</button>
+<button type="button" onclick="document.write(5 + 6)">Try it</button><br>
 
 <script>
     alert(5 + 6);
+    console.log("2");
     </script>
+
+
+<script>
+    var htmlContent = "<h1>Meu Título</h1><p>Este é um parágrafo</p>";
+    alert(htmlContent);
+    console.log("3");
+    </script>
+
+<script>
+    var htmlContent = "<h1>Meu Título htmlContent</h1><p>Este é um parágrafo do htmlContent</p>";
+    document.getElementById("demo1").innerHTML = htmlContent;
+    document.write("teste document htmlContent")
+    console.log("4");
+    </script>
+
+<button onclick="openModal()">Abrir Modal</button>
+
+<!-- Modal -->
+<div id="myModal"></div>
+
+<script>
+  function openModal() {
+    var htmlContent = "<h1>Meu Título</h1><p>Este é um parágrafo</p>";
+    $("#myModal").html(htmlContent);
+    $("#myModal").show();
+    console.log("6");
+  }
+  console.log("5");
+</script>
+
+<button onclick="window.print()">Print this page</button>
+
+<h1>Variáveis</h1>
+
+<p id="var1"></p>
 
     
 </body>
